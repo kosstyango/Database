@@ -43,5 +43,4 @@ FragmentManager fragmentManager = getSupportFragmentManager();
         fragment.setArguments(bundle); //кладём bundle в фрагмент
         fragmentManager.beginTransaction().replace(R.id.fragmentContainer, fragment).commit(); //заменяем фрагмент
     }
-
 }

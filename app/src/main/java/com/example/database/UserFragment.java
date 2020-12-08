@@ -22,8 +22,8 @@ public class UserFragment extends Fragment { //наследуем класс Fra
     public void onCreate(Bundle savedInstanceState) { //переопределяем класс onCreate
         super.onCreate(savedInstanceState); //
         user = new User();
-        user.setName("Ivan");
-        user.setLastName("Petrov");
+        user.setName("Ваня");
+        user.setLastName("Иванов");
     }
 
     @Override
