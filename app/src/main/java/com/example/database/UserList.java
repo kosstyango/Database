@@ -1,5 +1,7 @@
 package com.example.database;
 
+import android.content.ContentValues;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -26,4 +28,15 @@ public class UserList {
     public List getUsers(){//Геттер для списка 100 пользователей
         return users;
     }
+
+    public void updateUser(User user) { //реализуем UPDATE базы пользователей 7_12_20
+        String uuidString = user.getUuid().toString();
+        ContentValues values = getContentValues(user);
+
+        database.update(UserDbSchema.UserTable.NAME, values,
+                UserDbShema.UserTable.Cols.UUID+"=?",
+                new String[]{uuidString}); //избегаем опасности хакерских атак
+    }
+
+
 }

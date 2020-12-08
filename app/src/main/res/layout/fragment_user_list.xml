@@ -1,7 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.appcompat.app.AlertController.RecycleListView
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/userRecyclerView">
-
-</androidx.appcompat.app.AlertController.RecycleListView>
+    android:id="@+id/userRecyclerView"
+    android:orientation="horizontal">
+    <TextView
+        android:id="@+id/Name_LastName_View"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:text="TextView"/>
+<EditText
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/EditName"
+    android:hint="Поменять имя"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/EditLastName"
+        android:hint="Поменять фамилию"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/updateBtn"
+        android:text="Изменить"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/deleteBtn"
+        android:text="Удалить"/>
+</LinearLayout>
